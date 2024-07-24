@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: black;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  /* background-color: gray; */
+  width: 800px;
+  /* Increased width */
+  height: 70vh;
+  margin-left: 20px;
+  /* Reduced margin from left */
+}
+
+.password-generator {
+  width: 100%;
+}
+
+.password-generator h1 {
+  color: #ffeb3b;
+}
+
+.password-display-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.password-display {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  border: 2px solid #ffeb3b;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.password-display input {
+  border: none;
+  background: none;
+  color: white;
+  font-size: 1.2em;
+  width: 400px;
+  /* Fixed width */
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+#generate-btn {
+  background: #ffeb3b;
+  color: #000;
+  border: none;
+  padding: 10px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+#copy-btn {
+  background-color: #ffeb3b;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#copy-btn .arrow {
+  margin-left: 10px;
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+
+}
+
+#length-slider {
+  flex: 1;
+  margin-right: 10px;
+}
+
+#length-value {
+  font-size: 1.2em;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-family: cursive;
+  font-weight: bold;
+}
+
+.options label {
+  display: flex;
+  align-items: center;
+
+}
+
+
+
+/* Text typing animation */
+.text-typing p {
+  margin: 0;
+  white-space: nowrap;
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+  animation: typing 6s steps(22, end) infinite, blink 2s infinite;
+  /* Increased duration */
+  animation-delay: 1s;
+  font-size: 3rem;
+  color: #ffeb3b;
+}
+
+.text-typing span {
+  font-size: 4rem;
+  color: #ffeb3b;
+  padding-right: 2rem;
+}
+
+@keyframes typing {
+  0% {
+    width: 0%;
+  }
+
+  70% {
+    width: 100%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    border-right: 2px solid transparent;
+  }
+
+  50% {
+    border-right: 2px solid #222;
+  }
+}
